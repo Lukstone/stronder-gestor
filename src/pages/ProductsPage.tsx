@@ -14,10 +14,8 @@ export const ProductsPage = () => {
     try {
       if (selectedProduct) {
         await productService.update(selectedProduct.id!, formData);
-        document.location.reload();
       } else {
         await productService.create(formData);
-        document.location.reload();
       }
       setShowForm(false);
       setSelectedProduct(undefined);
@@ -44,7 +42,7 @@ export const ProductsPage = () => {
   return (
     <div className="h-screen flex flex-col bg-gray-100">
       <Navbar />
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1">
         <ProductList onAdd={handleAdd} onEdit={(product) => handleEdit(product.id!)} />
         {showForm && (
           <ProductForm

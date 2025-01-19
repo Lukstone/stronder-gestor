@@ -56,13 +56,21 @@ export const ProductList = ({ onAdd, onEdit }: ProductListProps) => {
     <div className="h-full bg-white">
       <div className="p-6 flex justify-between items-center border-b">
         <h1 className="text-2xl font-bold text-gray-900">Produtos</h1>
-        <button
-          onClick={onAdd}
-          className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-        >
-          <Plus size={20} className="mr-2" />
-          Adicionar Produto
-        </button>
+        <div className="flex space-x-4">
+    <button
+      onClick={loadProducts}
+      className="flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+    >
+      Atualizar Produtos
+    </button>
+    <button
+      onClick={onAdd}
+      className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+    >
+      <Plus size={20} className="mr-2" />
+      Adicionar Produto
+    </button>
+  </div>
       </div>
       <div className="p-6">
         <input

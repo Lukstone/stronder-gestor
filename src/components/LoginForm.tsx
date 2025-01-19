@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, User } from 'lucide-react';
 import toast from 'react-hot-toast';
-import logo6k2 from '../assets/6k2.webp';
 import { useAuth } from '../services/authContext';
 
 export const LoginForm = () => {
@@ -33,7 +32,7 @@ export const LoginForm = () => {
       </div>
       <div className="w-1/2 flex items-center justify-center bg-gray-100">
         <div className="bg-white p-8 rounded-lg shadow-md w-96">
-          <img src={logo6k2} alt="Logo" className="mx-auto mb-8 h-40" /> {/* Logo acima do formulário */}
+          <img src="https://firebasestorage.googleapis.com/v0/b/stronder-37202.appspot.com/o/6k2.webp?alt=media&token=08111085-484e-482a-8e94-c2e71eba7c9b" alt="Logo" className="mx-auto mb-8 h-40" /> {/* Logo acima do formulário */}
           <h1 className="text-2xl font-bold text-center mb-6">Gerenciador de Produtos</h1>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
